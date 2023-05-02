@@ -1,6 +1,6 @@
 .node {
-  width: 25px;
-  height: 25px;
+  width: 2.24vw;
+  height: 3.8vh;
   outline: 1px solid rgb(175, 216, 248);
   display: inline-block;
 }
@@ -15,18 +15,14 @@
 
 .node-visited {
   animation-name: visitedAnimation;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
   animation-delay: 0;
-  animation-direction: alternate;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-play-state: running;
 }
 
 @keyframes visitedAnimation {
   0% {
-    transform: scale(0.3);
+    /* transform: scale(0.3); */
     background-color: rgba(0, 0, 66, 0.75);
     border-radius: 100%;
   }
@@ -36,12 +32,12 @@
   }
 
   75% {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     background-color: rgba(0, 217, 159, 0.75);
   }
 
   100% {
-    transform: scale(1);
+    /* transform: scale(1); */
     background-color: rgba(0, 190, 218, 0.75);
   }
 }
@@ -52,10 +48,32 @@
 
 .node-shortest-path {
   animation-name: shortestPath;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-delay: 0;
   animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+.node-shortest-path-start {
+  animation-name: shortestPathStart;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  background-color: green;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+.node-shortest-path-end {
+  animation-name: shortestPathEnd;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  background-color: green;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: running;
@@ -75,5 +93,37 @@
   100% {
     transform: scale(1);
     background-color: rgb(255, 254, 106);
+  }
+}
+@keyframes shortestPathStart {
+  0% {
+    transform: scale(0.6);
+    background-color: green;
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: green;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: green;
+  }
+}
+@keyframes shortestPathEnd {
+  0% {
+    transform: scale(0.6);
+    background-color: red;
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: red;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: red;
   }
 }

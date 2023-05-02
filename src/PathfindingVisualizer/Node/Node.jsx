@@ -38,7 +38,7 @@ export default function Node({
           onMouseEnter={() => onMouseEnter(row, col)}
           onMouseUp={() => onMouseUp()}
           onClick={() => {
-            console.log(col, row);
+            // console.log(col, row);
             SetSTART_NODE_COL(col);
             SetSTART_NODE_ROW(row);
             setStartNode(!startNode);
@@ -52,7 +52,7 @@ export default function Node({
           onMouseEnter={() => onMouseEnter(row, col)}
           onMouseUp={() => onMouseUp()}
           onClick={() => {
-            console.log(col, row);
+            // console.log(col, row);
             SetFINISH_NODE_COL(col);
             SetFINISH_NODE_ROW(row);
             setEndNode(!endNode);
